@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<title>Document</title>
+<meta charset="utf-8">
+<script>
+/*json은 자바스크립트 객체이므로,
+당연히 자바스크립트 코드내에서 작성해야 함
+평상시에 작성한 거푸집 목적의 자바스크립트 클래스와는 목적이 틀리다..
+즉 재사용성을 염두해둔 클래스가 아니라, 데이터를 담고 전달하기 위한 dto목적으로 보아야 한다..
+따라서 아래의 객체는 클래스보다는 인스턴스로 보아야 한다..
+고양이-나비, 3세
+강아지-뽀삐, 5세
+*/
+/*
+자바 -컴파일 형 언어
+자바스크립트 -인터프리터 언어
+
+둘의 차이점 : 인터프리터 언어는 실행 시 마다 해석이 들어간다.
+				컴파일 형 언어는 이미 컴파일된 대상 파일을 수행한다. 최초 한번만 컴파일 해놓으면 그때부터는 코드에 대한 문법, 자료형 검사를 하지 않음.				
+*/
+var member={
+	"name" : "이긍열",
+	"age" : 23,
+	"gender" : "남",
+	"married" : false,
+	"pets" :[
+		{
+			"type" : "고양이",
+			"name" : "나비",
+			"age" :3
+		}, 
+		{	
+			"type" : "강아지",
+			"name" : "뽀삐",
+			"age" :3
+		}
+	]
+}
+	
+//고양이의 이름 출력 -> 객체 스타일로 개발. 
+alert(member.pets[0].name);
+
+//json으로 데이터를 구성하면 이 데이터에 대한 해석은 객체 지향 스타일로 처리가 가능하다
+alert(member.age);
+
+/*자바로 표기
+class Member
+{
+	String name;
+	int age;
+	String gender;
+	boolean married;
+}*/
+</script>
+</head>
+<body>
+</body>
+</html>
